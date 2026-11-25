@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+*{
+box-sizing:border-box}
+body{
+margin:0;
+background:#fcf8f5;
+color:#260f08;
+font-family:'DM Sans',Arial,sans-serif}
+main{
+max-width:1280px;
+margin:auto;
+padding:64px 32px;
+display:grid;
+grid-template-columns:minmax(0,1fr) 384px;
+gap:32px;
+align-items:start}
+h1{
+font-size:40px;
+line-height:1.15;
+margin:0 0 30px}
+h2{
+color:#c73b0f;
+margin:0 0 24px;
+font-size:24px}
+.grid{
+display:grid;
+grid-template-columns:repeat(3,minmax(0,1fr));
+gap:32px 24px}
+.picture{
+position:relative;
+margin-bottom:36px}
+.photo{
+aspect-ratio:1.05;
+overflow:hidden;
+border-radius:8px;
+background:#ead9cf;
+display:grid;
+place-items:center}
+.photo img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:transform .25s}
+.photo:hover img{
+transform:scale(1.035)}
+.photo span{
+font-size:70px}
+.chosen .photo{
+outline:2px solid #c73b0f;
+outline-offset:-2px}
+button{
+font:inherit;
+cursor:pointer}
+button:focus-visible{
+outline:3px solid #87635a;
+outline-offset:3px}
+.add,.quantity{
+position:absolute;
+bottom:-22px;
+left:50%;
+transform:translateX(-50%);
+width:160px;
+height:44px;
+border-radius:30px;
+font-size:14px;
+font-weight:600}
+.add{
+background:white;
+border:1px solid #ad8a85;
+color:#260f08}
+.add:hover{
+color:#c73b0f;
+border-color:#c73b0f}
+.quantity{
+background:#c73b0f;
+color:white;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 12px}
+.quantity button{
+border:1px solid white;
+border-radius:50%;
+background:transparent;
+color:white;
+width:22px;
+height:22px;
+line-height:18px;
+padding:0}
+.quantity button:hover{
+background:white;
+color:#c73b0f}
+.category{
+color:#87635a;
+font-size:14px;
+margin:0 0 5px}
+h3{
+font-size:16px;
+margin:0 0 5px}
+.price,.prices b{
+color:#c73b0f}
+aside{
+background:white;
+padding:24px;
+border-radius:12px}
+.empty{
+text-align:center;
+color:#87635a;
+font-size:14px;
+font-weight:600}
+.empty div{
+font-size:72px}
+.empty p{
+margin:16px 0}
+ul{
+list-style:none;
+padding:0;
+margin:0}
+li{
+display:flex;
+align-items:center;
+gap:12px;
+padding:16px 0;
+border-bottom:1px solid #f0e5df;
+font-size:14px}
+.line-info{
+flex:1;
+min-width:0}
+.prices{
+display:flex;
+gap:9px;
+margin-top:8px;
+color:#87635a}
+.remove{
+border:1px solid #ad8a85;
+color:#87635a;
+background:white;
+border-radius:50%;
+width:20px;
+height:20px;
+padding:0;
+line-height:16px}
+.total{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:24px 0;
+font-size:14px}
+.total strong{
+font-size:24px}
+.carbon{
+text-align:center;
+background:#fcf8f5;
+padding:16px 8px;
+border-radius:8px;
+font-size:13px}
+.primary{
+width:100%;
+border:0;
+background:#c73b0f;
+color:white;
+border-radius:28px;
+padding:15px;
+font-weight:600;
+transition:background .2s}
+.primary:hover{
+background:#952c0b}
+dialog{
+border:0;
+border-radius:12px;
+padding:36px;
+width:min(592px,calc(100% - 32px));
+max-height:90vh;
+color:inherit;
+animation:appear .2s ease-out}
+dialog::backdrop{
+background:#0007}
+.check{
+color:#1ea575;
+border:2px solid;
+border-radius:50%;
+width:44px;
+height:44px;
+display:grid;
+place-items:center;
+font-size:26px;
+margin-bottom:24px}
+dialog h1{
+margin-bottom:8px}
+.summary{
+background:#fcf8f5;
+padding:0 24px;
+margin:24px 0;
+border-radius:8px}
+.small{
+width:48px;
+aspect-ratio:1;
+flex-shrink:0}
+.small span{
+font-size:26px}
+@keyframes appear{
+from{
+opacity:0;
+transform:translateY(10px)}
+to{
+opacity:1;
+transform:translateY(0)}
+}
+@media(max-width:1000px){
+main{
+grid-template-columns:1fr;
+padding:40px}
+}
+@media(max-width:600px){
+main{
+padding:24px;
+gap:32px}
+.grid{
+grid-template-columns:1fr;
+gap:24px}
+.photo{
+aspect-ratio:1.5}
+dialog{
+margin:auto 0 0;
+width:100%;
+max-width:none;
+border-radius:12px 12px 0 0;
+padding:24px}
+.small{
+aspect-ratio:1}
+}
+@media(prefers-reduced-motion:reduce){
+*,*::before,*::after{
+animation:none!important;
+transition:none!important}
+}
